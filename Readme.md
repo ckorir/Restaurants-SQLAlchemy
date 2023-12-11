@@ -29,13 +29,13 @@ This project provides a comprehensive solution for managing restaurant reviews. 
 1. **Clone the repository:**
    ```bash
    git clone git@github.com:ckorir/Restaurants-SQLAlchemy.git
-   cd restaurant-reviews
+   cd restaurant-reviews ```
 
 2. **Install Dependancies:**
-    ```pipenv install
+    ```pipenv install ```
 
 3. **Run Tests**
-    ```python3 lib/seed.py
+    ```python3 lib/seed.py```
 
 ## Models
 
