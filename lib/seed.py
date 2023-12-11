@@ -24,7 +24,7 @@ customers = [Customer(first_name=first_name, last_name=fake.last_name()) for fir
 review1 = Review(star_rating=5, customer=customers[0], restaurant=restaurant3)
 review2 = Review(star_rating=5, customer=customers[1], restaurant=restaurant2)
 review3 = Review(star_rating=4, customer=customers[2], restaurant=restaurant5)
-review4 = Review(star_rating=3, customer=customers[3], restaurant=restaurant4)
+review4 = Review(star_rating=3, customer=customers[1], restaurant=restaurant4)
 review5 = Review(star_rating=5, customer=customers[4], restaurant=restaurant1)
 
 # Add instances to the session
@@ -33,7 +33,7 @@ session.add_all([restaurant1, restaurant2, restaurant3, restaurant4, restaurant5
 # Commit the changes
 session.commit()
 
-print("Fanciest Restaurant:", Restaurant.restaurant_fanciest().name)
+print("\nFanciest Restaurant:", Restaurant.restaurant_fanciest().name)
 print("\nAll Reviews for Restaurant One:")
 for review in restaurant1.restaurant_all_reviews():
     print(review)
@@ -73,7 +73,7 @@ customers[0].customer_delete_reviews(restaurant1)
 # Display all reviews after delete
 print("\nAll Reviews after Delete:")
 for review in restaurant1.restaurant_all_reviews():
-    print(review)
+    print(f"{review}\n")
 
 # Close the session
 session.close()
